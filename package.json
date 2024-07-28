@@ -13,6 +13,7 @@
 		"sass",
 		"responsive"
 	],
+	"main": "scss/chaos.scss",
 	"author": "The ChaosCss authors (https://github.com/Drugban/chaoscss/graphs/contributors)",
 	"license": "MIT",
 	"bugs": {
