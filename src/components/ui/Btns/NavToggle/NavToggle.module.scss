@@ -1,0 +1,12 @@
+.NavToggle {
+	background: transparent;
+	display: none;
+	color: currentColor;
+
+	@media (max-width: 768px) {
+		& {
+			place-items: center;
+			display: grid;
+		}
+	}
+}

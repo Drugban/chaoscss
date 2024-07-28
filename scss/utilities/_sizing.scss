@@ -1,0 +1,32 @@
+@include sizing("h", height, "h");
+@include sizing("w", width, "w");
+
+@include media("sm") {
+  @include sizing("sm_h", height, "h");
+  @include sizing("sm_w", width, "w");
+}
+
+@include media("md") {
+  @include sizing("md_h", height, "h");
+  @include sizing("md_w", width, "w");
+}
+
+@include media("lg") {
+  @include sizing("lg_h", height, "h");
+  @include sizing("lg_w", width, "w");
+}
+
+@include media("xl") {
+  @include sizing("xl_h", height, "h");
+  @include sizing("xl_w", width, "w");
+}
+
+@include media("xl2") {
+  @include sizing("xl2_h", height, "h");
+  @include sizing("xl2_w", width, "w");
+}
+
+@include media("xl3") {
+  @include sizing("xl3_h", height, "h");
+  @include sizing("xl3_w", width, "w");
+}

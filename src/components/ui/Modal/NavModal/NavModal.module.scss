@@ -1,0 +1,52 @@
+.NavModal {
+	background: rgba(#000, 0.5);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: start;
+	justify-content: end;
+}
+
+.NavOverlay {
+	position: relative;
+	top: 0;
+	right: 0;
+	padding:  1rem;
+	background: var(--lime);
+	border-radius: 0 0 0 1rem;
+	display: flex;
+	flex-direction: column;
+	width: 320px;
+}
+
+.NavModalHeader{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid currentColor;
+	> h2 {
+		font-size: 18px;
+	}
+}
+
+.NavModalNavMenu{
+	flex-direction: column;
+	align-items: start;
+}
+
+.NavModalFoot{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+	padding-top: 1rem;
+	margin-top: 1.5rem;
+	border-top: 1px solid currentColor;
+}

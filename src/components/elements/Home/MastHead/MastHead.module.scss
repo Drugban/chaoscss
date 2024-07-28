@@ -1,0 +1,50 @@
+.MastHead {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	text-align: start;
+	margin-inline: auto;
+	padding-block: var(--masthead-padding);
+}
+
+
+.Title {
+	margin-bottom: var(--masthead-title-margin);
+}
+
+.BtnGroup {
+	display: flex;
+	gap: 1rem;
+}
+
+@media (max-width: 768px) {
+	.MastHead {
+		align-items: center;
+		text-align: center;
+	}
+	.BtnGroup {
+		display: grid;
+		grid-template-columns: auto auto;
+
+		>*:nth-child(3) {
+			order: 1;
+		}
+
+		>*:nth-child(2) {
+			order: 2;
+		}
+
+		>*:nth-child(1) {
+			order: 3;
+			grid-column: span 2;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.BtnGroup{
+		display: flex;
+		flex-direction: column;
+		
+	}
+}

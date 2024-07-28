@@ -1,0 +1,29 @@
+.NotFoundPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: var(--notfound-padding);
+	color: var(--body-clr);
+}
+
+.Title {
+	font-size: var(--notfound-title-font-size);
+	margin-bottom: var(--notfound-title-margin);
+	font-weight: 900;
+}
+
+.SubTitle {
+	font-size: var(--notfound-subtitle-font-size);
+	margin-bottom: var(--notfound-subtitle-margin);
+}
+
+.Article {
+	font-size: var(--notfound-article-font-size);
+
+	.Link {
+		text-decoration: underline;
+		text-underline-offset: 8px;
+		transition: opacity .3s;
+	}
+}

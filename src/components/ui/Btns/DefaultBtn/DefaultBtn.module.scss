@@ -1,0 +1,10 @@
+.Btn {
+	background: var(--lime);
+	color: var(--light);
+	border-radius: 0.5rem;
+	padding: 1rem 2rem;
+	font-size: clamp(1rem, 2vw, 1.25rem);
+	height: auto;
+	display: grid;
+	place-items: center;
+}

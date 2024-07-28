@@ -1,0 +1,9 @@
+@function colorMix($mixclr, $value, $i) {
+  $mix: mix($mixclr, $value, $i * 5%);
+  @return $mix;
+}
+
+@function colorOpacity($value, $op) {
+  $opacity: opacify($value, $op);
+  @return $opacity;
+}

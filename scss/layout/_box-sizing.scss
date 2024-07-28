@@ -1,0 +1,5 @@
+@each $name, $value in $ch-box-sizing {
+  .#{$name}-box {
+    box-sizing: $value;
+  }
+}
