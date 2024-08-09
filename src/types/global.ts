@@ -9,5 +9,5 @@ export type ClassNameType = {
 }
 
 export type OnClickType = {
-	onClick: MouseEventHandler
+	onClick?: MouseEventHandler
 }

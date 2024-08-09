@@ -9,8 +9,8 @@ export const ThemeContext = createContext({
 const getTheme = () => {
 	const theme = localStorage.getItem('theme')
 	if (!theme) {
-		localStorage.setItem('theme', 'dark')
-		return 'dark'
+		localStorage.setItem('theme', 'light')
+		return 'light'
 	} else {
 		return theme
 	}

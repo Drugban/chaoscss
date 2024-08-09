@@ -1,8 +1,9 @@
 import { FC, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import '/scss/chaos.scss'
 import 'css/main.scss'
 
-const MainLayout = lazy(() => import('../components/layouts/MainLayout'))
+const MainLayout = lazy(() => import('../components/layout/MainLayout'))
 const NotFoundPage = lazy(() => import('./NotFound/NotFoundPage'))
 const Home = lazy(() => import('components/elements/Home'))
 const Docs = lazy(() => import('pages/IsBeingDeveloped/IsBeginDeveloped'))

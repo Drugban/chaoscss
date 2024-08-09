@@ -21,6 +21,29 @@ $clrs: (
   "purple":#800480,
 );
 
+:root {
+  --white: #fff;
+  --light: #f8f9fa;
+  --black: #000;
+  --dark: #1f1f1f;
+  --gray: #5b5b5b;
+  --red: #dc2626;
+  --rose: #e11d48;
+  --pink: #ec4899;
+  --yellow: #eab308;
+  --orange: #ff9500;
+  --green: #84cc16;
+  --lime: #10b981;
+  --primary: #0d35fd;
+  --blue: #2563eb;
+  --sky: #0ea5e9;
+  --cyan: #02eaea;
+  --violet: #8b5cf6;
+  --indigo: #4d0482;
+  --brow: #800408;
+  --purple: #800480;
+}
+
 $clrs-rgba: (
   "white": rgba(255, 255, 255, 0),
   "light": rgba(248, 249, 250, 0),
@@ -42,6 +65,28 @@ $clrs-rgba: (
   "brow": rgba(128, 4, 8, 0),
   "purple":rgba(128, 4, 128, 0),
 );
+
+:root {
+  --white-rgb: rgb(255, 255, 255);
+  --light-rgb: rgb(248, 249, 250);
+  --black-rgb: rgb(0, 0, 0);
+  --dark-rgb: rgb(3, 0, 0);
+  --red-rgb: rgb(220, 38, 38);
+  --rose-rgb: rgb(225, 29, 72);
+  --pink-rgb: rgb(236, 72, 153);
+  --yellow-rgb: rgb(234, 179, 8);
+  --orange-rgb: rgb(255, 149, 0);
+  --green-rgb: rgb(132, 204, 22);
+  --lime-rgb: rgb(16, 185, 129);
+  --primary-rgb: rgb(13, 53, 253);
+  --blue-rgb: rgb(37, 99, 235);
+  --sky-rgb: rgb(14, 165, 233);
+  --cyan-rgb: rgb(2, 234, 234);
+  --violet-rgb: rgb(139, 92, 246);
+  --indigo-rgb: rgb(77, 4, 130);
+  --brow-rgb: rgb(128, 4, 8);
+  --purple-rgb: rgb(128, 4, 128);
+}
 
 $clrs-types: (
   "transparent": transparent,
@@ -77,7 +122,7 @@ $ch-body-clr: map-get($clrs, "dark");
 $ch-body-bg: map-get($clrs, "white");
 
 
-$ch-extend: 360;
+$ch-extend: 320;
 
 
 

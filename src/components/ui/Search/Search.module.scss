@@ -1,0 +1,236 @@
+.DocsSearchButton {
+	align-items: center;
+	background: var(--light);
+	color: var(--body-bg);
+	border-radius: 6px;
+	cursor: pointer;
+	display: flex;
+	font-weight: 400;
+	height: 36px;
+	justify-content: space-between;
+	margin: 0 0 0 16px;
+	padding: 0 8px;
+	user-select: none;
+	color: var(--dark);
+	box-shadow: 0 4px 12px .5px rgba(3, 0, 0, .2);
+	width: 100%;
+	max-width: 300px;
+}
+
+.DocsSearchButtonPlaceholder {
+	font-weight: normal;
+	font-family: Inter,
+		system-ui,
+		Avenir,
+		Helvetica,
+		Arial,
+		sans-serif;
+	font-size: 1rem;
+	padding: 0 12px 0 6px;
+	color: rgba(var(--body-clr-rgb), .8);
+}
+
+.DocsSearchButtonContainer {
+	align-items: center;
+	display: flex;
+}
+
+.DocsSearchButtonKeys {
+	display: flex;
+	align-items: center;
+}
+
+.DocsSearchButtonKey {
+	align-items: center;
+	border-radius: 3px;
+	outline: 1px solid;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	margin-right: .4em;
+	position: relative;
+	padding: 4px;
+	height: 18px;
+	top: -1px;
+	font-size: .75rem;
+	font-weight: 500;
+	font-family: Inter,
+		system-ui,
+		Avenir,
+		Helvetica,
+		Arial,
+		sans-serif;
+}
+
+@media (max-width: 568px) {
+	.DocsSearchButtonKeys{
+		display: none !important;
+	}
+	.DocsSearchButtonPlaceholder {
+		display: none !important;
+	}
+	.DocsSearchButton {
+		width: auto;
+		padding: 6px;
+	}
+}
+
+.DocsSearch {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .4);
+	z-index: 1000;
+	position: fixed;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	--DocsSearch-highlight-clr: var(--lime)
+}
+
+.DocsSearchContainer {
+	background: var(--body-bg);
+	border-radius: .5rem;
+	display: flex;
+	flex-direction: column;
+	max-width: 35rem;
+	width: 35rem;
+	border: 1px solid rgba(var(--body-clr-rgb), .1);
+}
+
+.DocsSearchBar {
+	padding: .75rem .75rem 0;
+	width: 100%;
+	display: flex;
+
+	>div {
+		width: 100%;
+	}
+
+	form {
+		align-items: center;
+		background: 00;
+		border: 2px solid var(--DocsSearch-highlight-clr);
+		display: flex;
+		height: 3.5rem;
+		margin: 0;
+		padding: 0 .75rem;
+		position: relative;
+		width: 100%;
+		border-radius: .375rem;
+
+		button[type='submit'] {
+			width: 24px;
+			height: 24px;
+			flex-shrink: 0;
+			fill: var(--DocsSearch-highlight-clr);
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		button[type='reset'] {
+			display: none;
+		}
+
+		input {
+			background: transparent;
+			border: 0;
+			color: var(--body-clr);
+			flex: 1;
+			font: inherit;
+			font-size: 1.2em;
+			height: 100%;
+			outline: none;
+			padding: 0 0 0 8px;
+			flex: 1 0 auto;
+			order: 2;
+
+			&::placeholder {
+				color: rgba(var(--body-clr-rgb), .6);
+				font-size: inherit;
+			}
+		}
+	}
+}
+
+
+
+.DocsSearchContent {
+	width: 100%;
+	overflow: auto;
+	overflow-y: overlay;
+	max-height: calc(500px - 56px - 12px - 44px);
+	min-height: .75rem;
+	padding: 1rem .75rem;
+	scrollbar-width: thin;
+	scrollbar-color: inherit;
+
+	ol {
+		display: flex;
+		flex-direction: column;
+		gap: .75rem;
+
+		li {
+			border-radius: .375rem;
+			border-width: 1px;
+			border-style: solid;
+			border-color: var(--body-clr);
+
+			&:hover {
+				border-color: var(--lime);
+				background: var(--lime);
+			}
+
+			a {
+				padding: 1rem .75rem;
+				width: 100%;
+				height: 100%;
+				display: block;
+				font-size: 1.2em;
+			}
+		}
+	}
+}
+
+.DocsSearchFooter {
+	padding: 1rem;
+	width: 100%;
+	background: rgba(var(--body-clr-rgb), .1);
+	border-top: 1px solid rgba(var(--body-clr-rgb), .2);
+	border-bottom-left-radius: .5rem;
+	border-bottom-right-radius: .5rem;
+	font-size: .75rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.SearchModalCommands {
+	display: flex;
+	align-items: center;
+	gap: .75rem;
+
+	li {
+		display: flex;
+		align-items: center;
+		gap: .25rem;
+
+
+		kbd {
+			display: grid;
+			place-items: center;
+			background: rgba(var(--body-bg-rgb), .8);
+			padding: 2px;
+			border-radius: 4px;
+		}
+	}
+}
+
+.SearchBy {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	color: var(--body-clr);
+}

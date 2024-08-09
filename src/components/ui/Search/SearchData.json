@@ -1,0 +1,87 @@
+[
+	{
+		"label": "color",
+		"url": "/docs/color",
+		"zip_code": 1
+	},
+	{
+		"label": "spacing",
+		"url": "/docs/spacing",
+		"zip_code": 2
+	},
+	{
+		"label": "typography",
+		"url": "/docs/typography",
+		"zip_code": 3
+	},
+	{
+		"label": "container",
+		"url": "/docs/container",
+		"zip_code": 4
+	},
+	{
+		"label": "grid",
+		"url": "/docs/grid",
+		"zip_code": 5
+	},
+	{
+		"label": "background",
+		"url": "/docs/background",
+		"zip_code": 6
+	},
+	{
+		"label": "border",
+		"url": "/docs/border",
+		"zip_code": 7
+	},
+	{
+		"label": "display",
+		"url": "/docs/display",
+		"zip_code": 8
+	},
+	{
+		"label": "float",
+		"url": "/docs/float",
+		"zip_code": 9
+	},
+	{
+		"label": "inset",
+		"url": "/docs/inset",
+		"zip_code": 10
+	},
+	{
+		"label": "opacity",
+		"url": "/docs/opacity",
+		"zip_code": 11
+	},
+	{
+		"label": "overflow",
+		"url": "/docs/overflow",
+		"zip_code": 12
+	},
+	{
+		"label": "position",
+		"url": "/docs/position",
+		"zip_code": 13
+	},
+	{
+		"label": "sizing",
+		"url": "/docs/sizing",
+		"zip_code": 14
+	},
+	{
+		"label": "top-left-right-bottom",
+		"url": "/docs/top-left-right-bottom",
+		"zip_code": 15
+	},
+	{
+		"label": "visibility",
+		"url": "/docs/visibility",
+		"zip_code": 16
+	},
+	{
+		"label": "z-index",
+		"url": "/docs/z-index",
+		"zip_code": 17
+	}
+]

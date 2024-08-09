@@ -1,8 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+
 html,
 body {
 	background: var(--body-bg);
 	color: var(--body-clr);
 	min-height: 100vh;
+}
+
+* {
+	transition: all .1s;
 }
 
 #root {
@@ -12,7 +19,8 @@ body {
 }
 
 main {
-	flex: 1 0 auto
+	flex: 1 0 auto;
+	padding: 0 2rem;
 }
 
 footer,

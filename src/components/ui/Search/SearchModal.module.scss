@@ -1,0 +1,118 @@
+.SearchModal {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .4);
+	z-index: 1000;
+	position: fixed;
+	inset: 0;
+	display: grid;
+	place-items: center;
+}
+
+.SearchModalContainer {
+	background: var(--body-bg);
+	border-radius: .5rem;
+	display: flex;
+	flex-direction: column;
+	max-width: 35rem;
+	width: 35rem;
+	border: 1px solid rgba(var(--body-clr-rgb), .1);
+}
+
+.SearchModalHeader {
+	padding-inline: 1rem;
+	padding-top: 1rem;
+	width: 100%;
+
+	form {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 .75rem;
+		background: rgba(var(--body-clr-rgb), .1);
+		border: 1px solid rgba(var(--body-clr-rgb), .5);
+		border-radius: .5rem;
+		transition: background .2s, color .2s;
+		color: rgba(var(--body-clr-rgb), .8);
+		fill: rgba(var(--body-clr-rgb), .8);
+		gap: .5rem;
+
+		button[type='submit'] {
+			width: 20px;
+			height: 20px;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		button[type='reset'] {
+			display: none;
+		}
+
+		input {
+			background: transparent;
+			color: var(--body-clr);
+			font-size: 1rem;
+			font-weight: 400;
+			opacity: .9;
+			order: 2;
+			width: 100%;
+			height: 50px;
+
+			&::placeholder {
+				color: var(--body-clr);
+				font-size: 1rem;
+				font-weight: 400;
+				height: 100%;
+			}
+		}
+	}
+}
+
+
+
+.SearchModalContent {
+	padding: 2rem 1rem;
+	width: 100%;
+	overflow: auto;
+}
+
+.SearchModalFooter {
+	padding: 1rem;
+	width: 100%;
+	background: rgba(var(--body-clr-rgb), .1);
+	border-top: 1px solid rgba(var(--body-clr-rgb), .2);
+	border-bottom-left-radius: .5rem;
+	border-bottom-right-radius: .5rem;
+	font-size: .75rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.SearchModalCommands {
+	display: flex;
+	align-items: center;
+	gap: .75rem;
+
+	li {
+		display: flex;
+		align-items: center;
+		gap: .25rem;
+
+
+		kbd {
+			display: grid;
+			place-items: center
+		}
+	}
+}
+
+.SearchBy {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	color: var(--body-clr);
+}

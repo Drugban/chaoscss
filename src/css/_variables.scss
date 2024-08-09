@@ -3,6 +3,7 @@
 	--body-clr: var(--light);
 	--body-bg-rgb: 31, 31, 31;
 	--body-clr-rgb: 248, 289, 250;
+	--body-muted-clr: #a8a8a8;
 	color-scheme: dark;
 }
 
@@ -11,31 +12,10 @@
 	--body-clr: var(--dark);
 	--body-bg-rgb: 248, 289, 250;
 	--body-clr-rgb: 31, 31, 31;
+	--body-muted-clr: #5a5a5a;
 	color-scheme: light;
 }
 
-:root {
-	--white: #fff;
-	--light: #f8f9fa;
-	--black: #000;
-	--dark: #1f1f1f;
-	--gray: #5b5b5b;
-	--red: #dc2626;
-	--rose: #e11d48;
-	--pink: #ec4899;
-	--yellow: #eab308;
-	--orange: #ff9500;
-	--green: #84cc16;
-	--lime: #10b981;
-	--primary: #0d35fd;
-	--blue: #2563eb;
-	--sky: #0ea5e9;
-	--cyan: #02eaea;
-	--violet: #8b5cf6;
-	--indigo: #4d0482;
-	--brow: #800408;
-	--purple: #800480;
-}
 
 :root {
 	--h1-font-size: clamp(2rem, 4vw, 4rem);
@@ -44,13 +24,9 @@
 	--h4-font-size: clamp(1.5rem, 3vw, 1.875rem);
 	--h5-font-size: clamp(1.25rem, 2vw, 1.875rem);
 	--h6-font-size: clamp(1rem, 2vw, 1.25rem);
-	--p-font-size: clamp(1rem, 2vw, 1.5rem);
+	--p-font-size: 1.125rem;
 }
 
-:root {
-	--masthead-padding: 5rem;
-	--masthead-title-margin: clamp(.875rem, 1.5vw, 1.25rem);
-}
 
 :root {
 	--notfound-padding: clamp(6rem, 4vw, 4rem) clamp(1rem, 2vw, 2rem);

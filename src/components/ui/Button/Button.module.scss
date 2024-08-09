@@ -1,0 +1,22 @@
+.Button {
+	background: var(--body-clr);
+	color: var(--body-bg);
+	border-radius: .5rem;
+	position: relative;
+	padding: 1rem 1.25rem;
+	font-weight: 600;
+	font-size: .875rem;
+	height: 3rem;
+}
+
+.ButtonOutline {
+	background: transparent;
+	color: var(--body-clr);
+	outline: 2px solid var(--body-clr);
+	border-radius: .5rem;
+	position: relative;
+	padding: 1rem 1.25rem;
+	font-weight: 600;
+	font-size: .875rem;
+	height: 3rem;
+}

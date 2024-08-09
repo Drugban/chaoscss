@@ -3,48 +3,29 @@
 	flex-direction: column;
 	align-items: start;
 	text-align: start;
-	margin-inline: auto;
-	padding-block: var(--masthead-padding);
+	margin: 0 auto;
+	padding-top: 6rem;
+	max-width: 72rem;
 }
 
-
 .Title {
-	margin-bottom: var(--masthead-title-margin);
+	font-weight: 900;
+}
+
+.Description {
+	margin: 1.5rem auto 0 0;
 }
 
 .BtnGroup {
 	display: flex;
+	align-items: center;
 	gap: 1rem;
+	margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
-	.MastHead {
-		align-items: center;
-		text-align: center;
-	}
+
+@media (max-width: 546px) {
 	.BtnGroup {
-		display: grid;
-		grid-template-columns: auto auto;
-
-		>*:nth-child(3) {
-			order: 1;
-		}
-
-		>*:nth-child(2) {
-			order: 2;
-		}
-
-		>*:nth-child(1) {
-			order: 3;
-			grid-column: span 2;
-		}
-	}
-}
-
-@media (max-width: 640px) {
-	.BtnGroup{
-		display: flex;
 		flex-direction: column;
-		
 	}
 }

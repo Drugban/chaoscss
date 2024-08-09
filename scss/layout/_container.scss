@@ -11,6 +11,7 @@
     &-#{$point} {
       @include container();
       max-width: $value;
+      width: 100%;
     }
 
   }
