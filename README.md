@@ -4,6 +4,10 @@
   <img src='public/android-chrome-512x512.png' width='144' height='144' alt='logo'>
 </p>
 
+```html
+<link href="https://cdn.jsdelivr.net/npm/chaoscss@1/css/chaos.min.css" rel="stylesheet">
+```
+
 ```bash
 npm install chaoscss
 ```
