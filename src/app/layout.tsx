@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "regular and simple css frame-work",
   keywords: "css, sass, framework, frame-work",
   icons: [
-    '/favicon.ico',
-    '/favicon-32x32.png',
-    '/favicon-16x16.png',
-    '/apple-touch-icon.png',
-    '/android-chrome-512x512.png',
-    '/android-chrome-192x192.png']
+    '~/public/favicon.ico',
+    '~/public/favicon-32x32.png',
+    '~/public/favicon-16x16.png',
+    '~/public/apple-touch-icon.png',
+    '~/public/android-chrome-512x512.png',
+    '~/public/android-chrome-192x192.png']
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
