@@ -85,15 +85,6 @@ kbd {
   padding: 0.125rem 0.25rem;
 }
 
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-  box-shadow: none;
-  outline: #000 dotted 2px;
-  outline-offset: 0.05em;
-}
 
 ol,
 ul {

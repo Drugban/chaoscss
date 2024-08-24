@@ -12,7 +12,7 @@ type ButtonProps = {
   color?: string;
   type?: string;
   size?: string;
-  children: ReactNode;
+children: ReactNode;
   href?: Url;
   ref?: string;
   target?: string;
