@@ -1,0 +1,37 @@
+@for $i from 0 through 10 {
+  .op-#{$i} {
+    opacity: calc($i / 10);
+  }
+}
+
+@mixin opacity($point) {
+  @for $i from 0 through 10 {
+    .#{$point}_op-#{$i} {
+      opacity: calc($i / 10);
+    }
+  }
+}
+
+@include media("sm") {
+  @include opacity("sm");
+}
+
+@include media("md") {
+  @include opacity("md");
+}
+
+@include media("lg") {
+  @include opacity("lg");
+}
+
+@include media("xl") {
+  @include opacity("xl");
+}
+
+@include media("xl2") {
+  @include opacity("xl2");
+}
+
+@include media("xl3") {
+  @include opacity("xl3");
+}

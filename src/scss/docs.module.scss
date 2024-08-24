@@ -1,0 +1,62 @@
+.wrap {
+  display: grid;
+  grid-template-areas: "aside docs";
+  grid-template-columns: 15% 85%;
+}
+
+.docs {
+  display: grid;
+  grid-template-areas: "content tocbar";
+  grid-template-columns: 80% 20%;
+  grid-area: docs;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.content {
+  padding: 3rem 1rem 2rem;
+  grid-area: content;
+}
+
+.tocbar {
+  grid-area: tocbar;
+}
+
+.codesnippet {
+  margin: 0;
+  background: var(--codesnippet-bg);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.highlight {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  padding-right: 6rem;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow-x: auto;
+  word-wrap: break-word;
+  background-color: rgba(var(--bs-body-color-rgb), 0.075);
+  border-radius: calc(0.5rem - 1px);
+  font-size: 1.125rem;
+
+  pre {
+    padding: 0;
+    margin: 0.625rem 0;
+    color: var(--body-bg);
+    font-weight: 500;
+
+    code.bash:before {
+      color: var(--clear-clr);
+      content: "$ ";
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+  }
+}

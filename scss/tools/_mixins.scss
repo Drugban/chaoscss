@@ -1,0 +1,252 @@
+@mixin container($padding-x: 15px) {
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin spacing($unit, $spacing, $prefix, $i) {
+  .#{$prefix} {
+    &-#{$i} {
+      #{$unit}: $spacing;
+    }
+
+    &l-#{$i} {
+      #{$unit}-left: $spacing;
+    }
+
+    &r-#{$i} {
+      #{$unit}-right: $spacing;
+    }
+
+    &t-#{$i} {
+      #{$unit}-top: $spacing;
+    }
+
+    &b-#{$i} {
+      #{$unit}-bottom: $spacing;
+    }
+
+    &x-#{$i} {
+      #{$unit}-left: $spacing;
+      #{$unit}-right: $spacing;
+    }
+
+    &y-#{$i} {
+      #{$unit}-top: $spacing;
+      #{$unit}-bottom: $spacing;
+    }
+  }
+}
+
+@mixin spacingPrecent($unit, $spacing, $prefix, $i) {
+  .#{$prefix} {
+    &-#{$i}p {
+      #{$unit}: $spacing;
+    }
+
+    &l-#{$i}p {
+      #{$unit}-left: $spacing;
+    }
+
+    &r-#{$i}p {
+      #{$unit}-right: $spacing;
+    }
+
+    &t-#{$i}p {
+      #{$unit}-top: $spacing;
+    }
+
+    &b-#{$i}p {
+      #{$unit}-bottom: $spacing;
+    }
+
+    &x-#{$i}p {
+      #{$unit}-left: $spacing;
+      #{$unit}-right: $spacing;
+    }
+
+    &y-#{$i}p {
+      #{$unit}-top: $spacing;
+      #{$unit}-bottom: $spacing;
+    }
+  }
+}
+
+@mixin color($prefix, $unit, $point) {
+  @if ($point != "") {
+    @each $name, $value in $clrs {
+      .#{$point}_#{$prefix} {
+        &-#{$name} {
+          #{$unit}: $value;
+        }
+
+        @if $name == "white" or $name == "light" {
+          @for $i from 0 through 10 {
+            &-#{$name}-#{$i} {
+              #{$unit}: colorMix(#000, $value, $i);
+            }
+          }
+        } @else {
+          @for $i from 0 through 10 {
+            &-#{$name}-#{$i} {
+              #{$unit}: colorMix(#fff, $value, $i);
+            }
+          }
+        }
+      }
+    }
+
+    @each $name, $value in $clrs-rgba {
+      @for $i from 0 through 9 {
+        .#{$point}_#{$prefix}-#{$name}-op-#{$i} {
+          #{$unit}: colorOpacity($value, calc($i / 10));
+        }
+      }
+    }
+
+    @each $name, $value in $clrs-types {
+      .#{$point}#{$prefix}-#{$name} {
+        #{$unit}: $value;
+      }
+    }
+  }
+
+  @if ($point == "") {
+    @each $name, $value in $clrs {
+      .#{$prefix} {
+        &-#{$name} {
+          #{$unit}: $value;
+        }
+
+        @if $name == "white" or $name == "light" {
+          @for $i from 0 through 10 {
+            &-#{$name}-#{$i} {
+              #{$unit}: colorMix(#000, $value, $i);
+            }
+          }
+        } @else {
+          @for $i from 0 through 10 {
+            &-#{$name}-#{$i} {
+              #{$unit}: colorMix(#fff, $value, $i);
+            }
+          }
+        }
+      }
+    }
+
+    @each $name, $value in $clrs-rgba {
+      @for $i from 0 through 9 {
+        .#{$prefix}-#{$name}-op-#{$i} {
+          #{$unit}: colorOpacity($value, calc($i / 10));
+        }
+      }
+    }
+
+    @each $name, $value in $clrs-types {
+      .#{$prefix}-#{$name} {
+        #{$unit}: $value;
+      }
+    }
+  }
+}
+
+@mixin sizing($prefix, $unit, $type) {
+  .#{$prefix} {
+    @for $i from 0 through $ch-extend {
+      &-#{$i} {
+        #{$unit}: $i + (px);
+      }
+
+      &-min-#{$i} {
+        min-#{$unit}: $i + (px);
+      }
+
+      &-max-#{$i} {
+        max-#{$unit}: $i + (px);
+      }
+    }
+
+    @for $i from 0 through 100 {
+      &-#{$i}p {
+        #{$unit}: calc($i * 1%);
+      }
+
+      &-min-#{$i}p {
+        min-#{$unit}: calc($i * 1%);
+      }
+
+      &-max-#{$i}p {
+        max-#{$unit}: calc($i * 1%);
+      }
+    }
+
+    &-screen {
+      #{$unit}: 100v+ (#{$type});
+    }
+
+    &-min-screen {
+      min-#{$unit}: 100v+ (#{$type});
+    }
+
+    &-max-screen {
+      max-#{$unit}: 100v+ (#{$type});
+    }
+
+    &-auto {
+      #{$unit}: auto;
+    }
+
+    &-min-auto {
+      min-#{$unit}: auto;
+    }
+
+    &-max-auto {
+      max-#{$unit}: auto;
+    }
+  }
+}
+
+@mixin media($point) {
+  @if ($point == "sm") {
+    @media (min-width: map-get($breakpoints, "sm")) {
+      @content;
+    }
+  }
+
+  @if ($point == "xl3") {
+    @media (min-width: map-get($breakpoints, "xl3")) {
+      @content;
+    }
+  }
+
+  @if ($point == "xl2") {
+    @media (min-width: map-get($breakpoints, "xl2")) {
+      @content;
+    }
+  }
+
+  @if ($point == "xl") {
+    @media (min-width: map-get($breakpoints, "xl")) {
+      @content;
+    }
+  }
+
+  @if ($point == "lg") {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      @content;
+    }
+  }
+
+  @if ($point == "md") {
+    @media (min-width: map-get($breakpoints, "md")) {
+      @content;
+    }
+  }
+
+  @if ($point == "xs") {
+    @media (min-width: map-get($breakpoints, "xs")) {
+      @content;
+    }
+  }
+}

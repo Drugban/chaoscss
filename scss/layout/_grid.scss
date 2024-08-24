@@ -1,0 +1,59 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+@for $i from 0 through 10 {
+  .col-#{$i} {
+    width: calc($i * 10%);
+    flex: 0 0 auto;
+  }
+}
+
+.col-auto {
+  width: auto;
+  flex: 0 0 auto;
+}
+
+@mixin col($point) {
+  @for $i from 0 through 10 {
+    .#{$point}_col-#{$i} {
+      width: calc($i * 10%);
+      flex: 0 0 auto;
+    }
+  }
+
+  .#{$point}_col-auto {
+    width: auto;
+    flex: 0 0 auto;
+  }
+}
+
+@include media("sm") {
+  @include col("sm");
+}
+
+@include media("md") {
+  @include col("md");
+}
+
+@include media("lg") {
+  @include col("lg");
+}
+
+@include media("xl") {
+  @include col("xl");
+}
+
+@include media("xl2") {
+  @include col("xl2");
+}
+
+@include media("xl3") {
+  @include col("xl3");
+}

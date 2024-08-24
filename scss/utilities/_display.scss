@@ -1,0 +1,37 @@
+@each $name, $value in $ch-display {
+  .#{$name} {
+    display: $value !important;
+  }
+}
+
+@mixin display($point) {
+  @each $name, $value in $ch-display {
+    .#{$point}_#{$name} {
+      display: $value !important;
+    }
+  }
+}
+
+@include media("sm") {
+  @include display("sm");
+}
+
+@include media("md") {
+  @include display("md");
+}
+
+@include media("lg") {
+  @include display("lg");
+}
+
+@include media("xl") {
+  @include display("xl");
+}
+
+@include media("xl2") {
+  @include display("xl2");
+}
+
+@include media("xl3") {
+  @include display("xl3");
+}

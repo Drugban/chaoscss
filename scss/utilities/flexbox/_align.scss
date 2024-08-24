@@ -1,0 +1,51 @@
+@each $property, $map in $ch-align {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  .a-#{$prefix} {
+    @each $unit, $value in $values {
+      &-#{$unit} {
+        align-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@mixin align($point) {
+  @each $property, $map in $ch-align {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+
+    .#{$point}_a-#{$prefix} {
+      @each $unit, $value in $values {
+        &-#{$unit} {
+          align-#{$property}: $value;
+        }
+      }
+    }
+  }
+}
+
+@include media("sm") {
+  @include align("sm");
+}
+
+@include media("md") {
+  @include align("md");
+}
+
+@include media("lg") {
+  @include align("lg");
+}
+
+@include media("xl") {
+  @include align("xl");
+}
+
+@include media("xl2") {
+  @include align("xl2");
+}
+
+@include media("xl3") {
+  @include align("xl3");
+}

@@ -1,0 +1,71 @@
+.bg {
+  @each $property, $map in $ch-background {
+    @if (map-has-key($map, "prefix") ==false) {
+      @each $unit, $value in $map {
+        &-#{$unit} {
+          background-#{$property}: $value;
+        }
+      }
+    }
+
+    @if (map-has-key($map, "prefix") ==true) {
+      $prefix: map-get($map, "prefix");
+      $values: map-get($map, "values");
+
+      @each $unit, $value in $values {
+        &-#{$prefix}-#{$unit} {
+          background-#{$prefix}: $value;
+        }
+      }
+    }
+  }
+}
+
+@mixin bg($point) {
+  .#{$point}_bg {
+    @each $property, $map in $ch-background {
+      @if (map-has-key($map, "prefix") ==false) {
+        @each $unit, $value in $map {
+          &-#{$unit} {
+            background-#{$property}: $value;
+          }
+        }
+      }
+
+      @if (map-has-key($map, "prefix") ==true) {
+        $prefix: map-get($map, "prefix");
+        $values: map-get($map, "values");
+
+        @each $unit, $value in $values {
+          &-#{$prefix}-#{$unit} {
+            background-#{$prefix}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media("sm") {
+  @include bg("sm");
+}
+
+@include media("md") {
+  @include bg("md");
+}
+
+@include media("lg") {
+  @include bg("lg");
+}
+
+@include media("xl") {
+  @include bg("xl");
+}
+
+@include media("xl2") {
+  @include bg("xl2");
+}
+
+@include media("xl3") {
+  @include bg("xl3");
+}

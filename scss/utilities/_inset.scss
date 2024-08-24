@@ -1,0 +1,97 @@
+@for $i from 0 through $ch-extend {
+  .inset {
+    &-#{$i} {
+      inset: $i + (px);
+    }
+
+    &-x#{$i} {
+      left: $i + (px);
+      right: $i + (px);
+    }
+
+    &-y-#{$i} {
+      top: $i + (px);
+      bottom: $i + (px);
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  .inset {
+    &-#{$i}p {
+      inset: calc($i * 1%);
+    }
+
+    &-x-#{$i}p {
+      left: calc($i * 1%);
+      right: calc($i * 1%);
+    }
+
+    &-y-#{$i}p {
+      top: calc($i * 1%);
+      bottom: calc($i * 1%);
+    }
+  }
+}
+
+@mixin inset($point) {
+  @for $i from 0 through $ch-extend {
+    .#{$point}_inset {
+      &-#{$i} {
+        inset: $i + (px);
+      }
+
+      &-x#{$i} {
+        left: $i + (px);
+        right: $i + (px);
+      }
+
+      &-y-#{$i} {
+        top: $i + (px);
+        bottom: $i + (px);
+      }
+    }
+  }
+
+  @for $i from 0 through 100 {
+    .#{$point}_inset {
+      &-#{$i}p {
+        inset: calc($i * 1%);
+      }
+
+      &-x-#{$i}p {
+        left: calc($i * 1%);
+        right: calc($i * 1%);
+      }
+
+      &-y-#{$i}p {
+        top: calc($i * 1%);
+        bottom: calc($i * 1%);
+      }
+    }
+  }
+}
+
+@include media("sm") {
+  @include inset("sm");
+}
+
+@include media("md") {
+  @include inset("md");
+}
+
+@include media("lg") {
+  @include inset("lg");
+}
+
+@include media("xl") {
+  @include inset("xl");
+}
+
+@include media("xl2") {
+  @include inset("xl2");
+}
+
+@include media("xl3") {
+  @include inset("xl3");
+}

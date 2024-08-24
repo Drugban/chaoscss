@@ -1,0 +1,802 @@
+// Fonts
+
+@for $i from 0 through $ch-extend {
+  .fs-#{$i} {
+    font-size: $i + (px);
+  }
+}
+
+@for $i from 0 through 9 {
+  .fw-#{$i} {
+    font-weight: calc($i * 100);
+  }
+}
+
+@each $property, $map in $ch-font {
+  @if ($property == "family") {
+    @each $unit, $value in $map {
+      .#{$unit} {
+        font-family: $value;
+      }
+    }
+  } @else {
+    @each $unit, $value in $map {
+      .fs-#{$unit} {
+        font-style: $value;
+      }
+    }
+  }
+}
+
+// Decorations
+@each $property, $map in $ch-decor {
+  @if ($property == "line") {
+    @each $unit, $value in $map {
+      .#{$unit} {
+        text-decoration-#{$property}: $value;
+      }
+    }
+  }
+
+  @if ($property != "line") {
+    @each $unit, $value in $map {
+      .decor-#{$unit} {
+        text-decoration-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@for $i from 0 through 16 {
+  .decor-#{$i} {
+    text-decoration-thickness: $i + (px);
+  }
+}
+
+@for $i from 0 through 16 {
+  .decor-offset-#{$i} {
+    text-underline-offset: $i + (px);
+  }
+}
+
+// Letter-spacing
+
+@for $i from 1 through 16 {
+  .ls-tight-#{$i} {
+    letter-spacing: calc($i - ($i * 2)) + (px);
+  }
+}
+
+@for $i from 1 through 16 {
+  .ls-wide-#{$i} {
+    letter-spacing: $i + (px);
+  }
+}
+
+// Line-height
+
+@for $i from 0 through 64 {
+  .lh-#{$i} {
+    line-height: $i + (px);
+  }
+}
+
+@each $name, $value in $ch-line-height {
+  .lh-#{$name} {
+    line-height: $value;
+  }
+}
+
+// Text-align
+
+@each $name, $value in $ch-text-align {
+  .text-#{$name} {
+    text-align: $value;
+  }
+}
+
+// Text-indent
+
+@for $i from 0 through $ch-extend {
+  .indent-#{$i} {
+    text-indent: $i + (px);
+  }
+}
+
+// Text-transform
+
+@each $name, $value in $ch-text-transform {
+  .#{$name} {
+    text-transform: $value;
+  }
+}
+
+@include media("sm") {
+  // Fonts
+
+  @for $i from 0 through $ch-extend {
+    .sm_fs-#{$i} {
+      font-size: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 9 {
+    .sm_fw-#{$i} {
+      font-weight: calc($i * 100);
+    }
+  }
+
+  @each $property, $map in $ch-font {
+    @if ($property == "family") {
+      @each $unit, $value in $map {
+        .sm_#{$unit} {
+          font-family: $value;
+        }
+      }
+    } @else {
+      @each $unit, $value in $map {
+        .sm_fs-#{$unit} {
+          font-style: $value;
+        }
+      }
+    }
+  }
+
+  // Decorations
+  @each $property, $map in $ch-decor {
+    @if ($property == "line") {
+      @each $unit, $value in $map {
+        .sm_#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+
+    @if ($property != "line") {
+      @each $unit, $value in $map {
+        .sm_decor-#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .sm_decor-#{$i} {
+      text-decoration-thickness: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .sm_decor-offset-#{$i} {
+      text-underline-offset: $i + (px);
+    }
+  }
+
+  // Letter-spacing
+
+  @for $i from 1 through 16 {
+    .sm_ls-tight-#{$i} {
+      letter-spacing: calc($i - ($i * 2)) + (px);
+    }
+  }
+
+  @for $i from 1 through 16 {
+    .sm_ls-wide-#{$i} {
+      letter-spacing: $i + (px);
+    }
+  }
+
+  // Line-height
+
+  @for $i from 0 through 64 {
+    .sm_lh-#{$i} {
+      line-height: $i + (px);
+    }
+  }
+
+  @each $name, $value in $ch-line-height {
+    .sm_lh-#{$name} {
+      line-height: $value;
+    }
+  }
+
+  // Text-align
+
+  @each $name, $value in $ch-text-align {
+    .sm_text-#{$name} {
+      text-align: $value;
+    }
+  }
+
+  // Text-indent
+
+  @for $i from 0 through $ch-extend {
+    .sm_indent-#{$i} {
+      text-indent: $i + (px);
+    }
+  }
+
+  // Text-transform
+
+  @each $name, $value in $ch-text-transform {
+    .sm_#{$name} {
+      text-transform: $value;
+    }
+  }
+}
+
+@include media("md") {
+  // Fonts
+
+  @for $i from 0 through $ch-extend {
+    .md_fs-#{$i} {
+      font-size: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 9 {
+    .md_fw-#{$i} {
+      font-weight: calc($i * 100);
+    }
+  }
+
+  @each $property, $map in $ch-font {
+    @if ($property == "family") {
+      @each $unit, $value in $map {
+        .md_#{$unit} {
+          font-family: $value;
+        }
+      }
+    } @else {
+      @each $unit, $value in $map {
+        .md_fs-#{$unit} {
+          font-style: $value;
+        }
+      }
+    }
+  }
+
+  // Decorations
+  @each $property, $map in $ch-decor {
+    @if ($property == "line") {
+      @each $unit, $value in $map {
+        .md_#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+
+    @if ($property != "line") {
+      @each $unit, $value in $map {
+        .md_decor-#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .md_decor-#{$i} {
+      text-decoration-thickness: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .md_decor-offset-#{$i} {
+      text-underline-offset: $i + (px);
+    }
+  }
+
+  // Letter-spacing
+
+  @for $i from 1 through 16 {
+    .md_ls-tight-#{$i} {
+      letter-spacing: calc($i - ($i * 2)) + (px);
+    }
+  }
+
+  @for $i from 1 through 16 {
+    .md_ls-wide-#{$i} {
+      letter-spacing: $i + (px);
+    }
+  }
+
+  // Line-height
+
+  @for $i from 0 through 64 {
+    .md_lh-#{$i} {
+      line-height: $i + (px);
+    }
+  }
+
+  @each $name, $value in $ch-line-height {
+    .md_lh-#{$name} {
+      line-height: $value;
+    }
+  }
+
+  // Text-align
+
+  @each $name, $value in $ch-text-align {
+    .md_text-#{$name} {
+      text-align: $value;
+    }
+  }
+
+  // Text-indent
+
+  @for $i from 0 through $ch-extend {
+    .md_indent-#{$i} {
+      text-indent: $i + (px);
+    }
+  }
+
+  // Text-transform
+
+  @each $name, $value in $ch-text-transform {
+    .md_#{$name} {
+      text-transform: $value;
+    }
+  }
+}
+
+@include media("lg") {
+  // Fonts
+
+  @for $i from 0 through $ch-extend {
+    .lg_fs-#{$i} {
+      font-size: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 9 {
+    .lg_fw-#{$i} {
+      font-weight: calc($i * 100);
+    }
+  }
+
+  @each $property, $map in $ch-font {
+    @if ($property == "family") {
+      @each $unit, $value in $map {
+        .lg_#{$unit} {
+          font-family: $value;
+        }
+      }
+    } @else {
+      @each $unit, $value in $map {
+        .lg_fs-#{$unit} {
+          font-style: $value;
+        }
+      }
+    }
+  }
+
+  // Decorations
+  @each $property, $map in $ch-decor {
+    @if ($property == "line") {
+      @each $unit, $value in $map {
+        .lg_#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+
+    @if ($property != "line") {
+      @each $unit, $value in $map {
+        .lg_decor-#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .lg_decor-#{$i} {
+      text-decoration-thickness: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .lg_decor-offset-#{$i} {
+      text-underline-offset: $i + (px);
+    }
+  }
+
+  // Letter-spacing
+
+  @for $i from 1 through 16 {
+    .lg_ls-tight-#{$i} {
+      letter-spacing: calc($i - ($i * 2)) + (px);
+    }
+  }
+
+  @for $i from 1 through 16 {
+    .lg_ls-wide-#{$i} {
+      letter-spacing: $i + (px);
+    }
+  }
+
+  // Line-height
+
+  @for $i from 0 through 64 {
+    .lg_lh-#{$i} {
+      line-height: $i + (px);
+    }
+  }
+
+  @each $name, $value in $ch-line-height {
+    .lg_lh-#{$name} {
+      line-height: $value;
+    }
+  }
+
+  // Text-align
+
+  @each $name, $value in $ch-text-align {
+    .lg_text-#{$name} {
+      text-align: $value;
+    }
+  }
+
+  // Text-indent
+
+  @for $i from 0 through $ch-extend {
+    .lg_indent-#{$i} {
+      text-indent: $i + (px);
+    }
+  }
+
+  // Text-transform
+
+  @each $name, $value in $ch-text-transform {
+    .lg_#{$name} {
+      text-transform: $value;
+    }
+  }
+}
+
+@include media("xl") {
+  // Fonts
+
+  @for $i from 0 through $ch-extend {
+    .xl_fs-#{$i} {
+      font-size: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 9 {
+    .xl_fw-#{$i} {
+      font-weight: calc($i * 100);
+    }
+  }
+
+  @each $property, $map in $ch-font {
+    @if ($property == "family") {
+      @each $unit, $value in $map {
+        .xl_#{$unit} {
+          font-family: $value;
+        }
+      }
+    } @else {
+      @each $unit, $value in $map {
+        .xl_fs-#{$unit} {
+          font-style: $value;
+        }
+      }
+    }
+  }
+
+  // Decorations
+  @each $property, $map in $ch-decor {
+    @if ($property == "line") {
+      @each $unit, $value in $map {
+        .xl_#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+
+    @if ($property != "line") {
+      @each $unit, $value in $map {
+        .xl_decor-#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .xl_decor-#{$i} {
+      text-decoration-thickness: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .xl_decor-offset-#{$i} {
+      text-underline-offset: $i + (px);
+    }
+  }
+
+  // Letter-spacing
+
+  @for $i from 1 through 16 {
+    .xl_ls-tight-#{$i} {
+      letter-spacing: calc($i - ($i * 2)) + (px);
+    }
+  }
+
+  @for $i from 1 through 16 {
+    .xl_ls-wide-#{$i} {
+      letter-spacing: $i + (px);
+    }
+  }
+
+  // Line-height
+
+  @for $i from 0 through 64 {
+    .xl_lh-#{$i} {
+      line-height: $i + (px);
+    }
+  }
+
+  @each $name, $value in $ch-line-height {
+    .xl_lh-#{$name} {
+      line-height: $value;
+    }
+  }
+
+  // Text-align
+
+  @each $name, $value in $ch-text-align {
+    .xl_text-#{$name} {
+      text-align: $value;
+    }
+  }
+
+  // Text-indent
+
+  @for $i from 0 through $ch-extend {
+    .xl_indent-#{$i} {
+      text-indent: $i + (px);
+    }
+  }
+
+  // Text-transform
+
+  @each $name, $value in $ch-text-transform {
+    .xl_#{$name} {
+      text-transform: $value;
+    }
+  }
+}
+
+@include media("xl2") {
+  // Fonts
+
+  @for $i from 0 through $ch-extend {
+    .xl2_fs-#{$i} {
+      font-size: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 9 {
+    .xl2_fw-#{$i} {
+      font-weight: calc($i * 100);
+    }
+  }
+
+  @each $property, $map in $ch-font {
+    @if ($property == "family") {
+      @each $unit, $value in $map {
+        .xl2_#{$unit} {
+          font-family: $value;
+        }
+      }
+    } @else {
+      @each $unit, $value in $map {
+        .xl2_fs-#{$unit} {
+          font-style: $value;
+        }
+      }
+    }
+  }
+
+  // Decorations
+  @each $property, $map in $ch-decor {
+    @if ($property == "line") {
+      @each $unit, $value in $map {
+        .xl2_#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+
+    @if ($property != "line") {
+      @each $unit, $value in $map {
+        .xl2_decor-#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .xl2_decor-#{$i} {
+      text-decoration-thickness: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .xl2_decor-offset-#{$i} {
+      text-underline-offset: $i + (px);
+    }
+  }
+
+  // Letter-spacing
+
+  @for $i from 1 through 16 {
+    .xl2_ls-tight-#{$i} {
+      letter-spacing: calc($i - ($i * 2)) + (px);
+    }
+  }
+
+  @for $i from 1 through 16 {
+    .xl2_ls-wide-#{$i} {
+      letter-spacing: $i + (px);
+    }
+  }
+
+  // Line-height
+
+  @for $i from 0 through 64 {
+    .xl2_lh-#{$i} {
+      line-height: $i + (px);
+    }
+  }
+
+  @each $name, $value in $ch-line-height {
+    .xl2_lh-#{$name} {
+      line-height: $value;
+    }
+  }
+
+  // Text-align
+
+  @each $name, $value in $ch-text-align {
+    .xl2_text-#{$name} {
+      text-align: $value;
+    }
+  }
+
+  // Text-indent
+
+  @for $i from 0 through $ch-extend {
+    .xl2_indent-#{$i} {
+      text-indent: $i + (px);
+    }
+  }
+
+  // Text-transform
+
+  @each $name, $value in $ch-text-transform {
+    .xl2_#{$name} {
+      text-transform: $value;
+    }
+  }
+}
+
+@include media("xl3") {
+  // Fonts
+
+  @for $i from 0 through $ch-extend {
+    .xl3_fs-#{$i} {
+      font-size: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 9 {
+    .xl3_fw-#{$i} {
+      font-weight: calc($i * 100);
+    }
+  }
+
+  @each $property, $map in $ch-font {
+    @if ($property == "family") {
+      @each $unit, $value in $map {
+        .xl3_#{$unit} {
+          font-family: $value;
+        }
+      }
+    } @else {
+      @each $unit, $value in $map {
+        .xl3_fs-#{$unit} {
+          font-style: $value;
+        }
+      }
+    }
+  }
+
+  // Decorations
+  @each $property, $map in $ch-decor {
+    @if ($property == "line") {
+      @each $unit, $value in $map {
+        .xl3_#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+
+    @if ($property != "line") {
+      @each $unit, $value in $map {
+        .xl3_decor-#{$unit} {
+          text-decoration-#{$property}: $value;
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .xl3_decor-#{$i} {
+      text-decoration-thickness: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 16 {
+    .xl3_decor-offset-#{$i} {
+      text-underline-offset: $i + (px);
+    }
+  }
+
+  // Letter-spacing
+
+  @for $i from 1 through 16 {
+    .xl3_ls-tight-#{$i} {
+      letter-spacing: calc($i - ($i * 2)) + (px);
+    }
+  }
+
+  @for $i from 1 through 16 {
+    .xl3_ls-wide-#{$i} {
+      letter-spacing: $i + (px);
+    }
+  }
+
+  // Line-height
+
+  @for $i from 0 through 64 {
+    .xl3_lh-#{$i} {
+      line-height: $i + (px);
+    }
+  }
+
+  @each $name, $value in $ch-line-height {
+    .xl3_lh-#{$name} {
+      line-height: $value;
+    }
+  }
+
+  // Text-align
+
+  @each $name, $value in $ch-text-align {
+    .xl3_text-#{$name} {
+      text-align: $value;
+    }
+  }
+
+  // Text-indent
+
+  @for $i from 0 through $ch-extend {
+    .xl3_indent-#{$i} {
+      text-indent: $i + (px);
+    }
+  }
+
+  // Text-transform
+
+  @each $name, $value in $ch-text-transform {
+    .xl3_#{$name} {
+      text-transform: $value;
+    }
+  }
+}

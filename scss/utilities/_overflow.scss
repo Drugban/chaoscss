@@ -1,0 +1,61 @@
+@each $name, $value in $ch-overflow {
+  .overflow-#{$name} {
+    overflow: $value;
+  }
+}
+
+@each $name, $value in $ch-overflow-x {
+  .overflow-x-#{$name} {
+    overflow-x: $value;
+  }
+}
+
+@each $name, $value in $ch-overflow-y {
+  .overflow-y-#{$name} {
+    overflow-y: $value;
+  }
+}
+
+@mixin overflow($point) {
+  @each $name, $value in $ch-overflow {
+    .#{$point}_overflow-#{$name} {
+      overflow: $value;
+    }
+  }
+
+  @each $name, $value in $ch-overflow-x {
+    .#{$point}_overflow-x-#{$name} {
+      overflow-x: $value;
+    }
+  }
+
+  @each $name, $value in $ch-overflow-y {
+    .#{$point}_overflow-y-#{$name} {
+      overflow-y: $value;
+    }
+  }
+}
+
+@include media("sm") {
+  @include overflow("sm");
+}
+
+@include media("md") {
+  @include overflow("md");
+}
+
+@include media("lg") {
+  @include overflow("lg");
+}
+
+@include media("xl") {
+  @include overflow("xl");
+}
+
+@include media("xl2") {
+  @include overflow("xl2");
+}
+
+@include media("xl3") {
+  @include overflow("xl3");
+}

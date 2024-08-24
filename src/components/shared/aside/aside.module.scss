@@ -1,0 +1,45 @@
+.aside {
+  overflow-y: auto;
+  position: sticky;
+  max-height: 48rem;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 20;
+  padding: 2rem 0.5rem;
+}
+
+.linksgroup {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.linkslabel {
+  font-weight: 600;
+  color: var(--body-emphasis-clr);
+  font-size: 1.25rem;
+}
+
+.links {
+  font-weight: 500;
+  padding-left: 0;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  border-left: 1px solid var(--muted-clr);
+
+  .link {
+    display: block;
+
+    a {
+      padding: 0.375rem 0.75rem;
+      margin-left: 0.75rem;
+      display: inline-block;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background: rgba(var(--body-clr-rgb), 0.1);
+      }
+    }
+  }
+}

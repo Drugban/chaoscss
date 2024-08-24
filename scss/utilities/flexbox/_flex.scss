@@ -1,0 +1,105 @@
+@each $property, $map in $ch-flex {
+  .flex {
+    @each $unit, $value in $map {
+      &-#{$unit} {
+        flex-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@for $i from 0 through $ch-extend {
+  .basis-#{$i} {
+    flex-basis: $i + (px);
+  }
+}
+
+@for $i from 0 through 100 {
+  .basis-#{$i}p {
+    flex-basis: calc($i * 1%);
+  }
+}
+
+@for $i from 0 through 10 {
+  .grow-#{$i} {
+    flex-grow: $i;
+  }
+}
+
+@for $i from 0 through 3 {
+  .shrink-#{$i} {
+    flex-shrink: $i;
+  }
+}
+
+@for $i from 0 through 64 {
+  .order-#{$i} {
+    order: $i;
+  }
+}
+
+@mixin flex($point) {
+  @each $property, $map in $ch-flex {
+    .#{$point}_flex {
+      @each $unit, $value in $map {
+        &-#{$unit} {
+          flex-#{$property}: $value;
+        }
+      }
+    }
+  }
+
+  @for $i from 0 through $ch-extend {
+    .#{$point}_basis-#{$i} {
+      flex-basis: $i + (px);
+    }
+  }
+
+  @for $i from 0 through 100 {
+    .#{$point}_basis-#{$i}p {
+      flex-basis: calc($i * 1%);
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .#{$point}_grow-#{$i} {
+      flex-grow: $i;
+    }
+  }
+
+  @for $i from 0 through 3 {
+    .#{$point}_shrink-#{$i} {
+      flex-shrink: $i;
+    }
+  }
+
+  @for $i from 0 through 64 {
+    .#{$point}_order-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+@include media("sm") {
+  @include flex("sm");
+}
+
+@include media("md") {
+  @include flex("md");
+}
+
+@include media("lg") {
+  @include flex("lg");
+}
+
+@include media("xl") {
+  @include flex("xl");
+}
+
+@include media("xl2") {
+  @include flex("xl2");
+}
+
+@include media("xl3") {
+  @include flex("xl3");
+}

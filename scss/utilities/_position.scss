@@ -1,0 +1,37 @@
+@each $name, $value in $ch-position {
+  .#{$name} {
+    position: $value;
+  }
+}
+
+@mixin position($point) {
+  @each $name, $value in $ch-position {
+    .#{$point}_#{$name} {
+      position: $value;
+    }
+  }
+}
+
+@include media("sm") {
+  @include position("sm");
+}
+
+@include media("md") {
+  @include position("md");
+}
+
+@include media("lg") {
+  @include position("lg");
+}
+
+@include media("xl") {
+  @include position("xl");
+}
+
+@include media("xl2") {
+  @include position("xl2");
+}
+
+@include media("xl3") {
+  @include position("xl3");
+}

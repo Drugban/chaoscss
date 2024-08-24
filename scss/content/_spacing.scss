@@ -1,0 +1,65 @@
+@for $i from $ch-extend through 0 {
+  @include spacing(margin, $i + (px), "m", $i);
+}
+
+@for $i from 100 through 0 {
+  @include spacingPrecent(margin, calc($i * 1%), "m", $i);
+}
+
+@include spacing(margin, auto, "m", auto);
+
+@for $i from $ch-extend through 0 {
+  @include spacing(padding, $i + (px), "p", $i);
+}
+
+@for $i from 100 through 0 {
+  @include spacingPrecent(padding, calc($i * 1%), "p", $i);
+}
+
+@include spacing(padding, auto, "p", auto);
+
+@mixin spacings($point) {
+  @for $i from $ch-extend through 0 {
+    @include spacing(margin, $i + (px), #{$point}_m, $i);
+  }
+
+  @for $i from 100 through 0 {
+    @include spacingPrecent(margin, calc($i * 1%), #{$point}_m, $i);
+  }
+
+  @include spacing(margin, auto, #{$point}_m, auto);
+
+  @for $i from $ch-extend through 0 {
+    @include spacing(padding, $i + (px), #{$point}_p, $i);
+  }
+
+  @for $i from 100 through 0 {
+    @include spacingPrecent(padding, calc($i * 1%), #{$point}_p, $i);
+  }
+
+  @include spacing(padding, auto, #{$point}_p, auto);
+}
+
+@include media("sm") {
+  @include spacings("sm");
+}
+
+@include media("md") {
+  @include spacings("md");
+}
+
+@include media("lg") {
+  @include spacings("lg");
+}
+
+@include media("xl") {
+  @include spacings("xl");
+}
+
+@include media("xl2") {
+  @include spacings("xl2");
+}
+
+@include media("xl3") {
+  @include spacings("xl3");
+}

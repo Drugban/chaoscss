@@ -1,0 +1,37 @@
+@each $name, $value in $ch-visibility {
+  .#{$name} {
+    visibility: $value;
+  }
+}
+
+@mixin visibility($point) {
+  @each $name, $value in $ch-visibility {
+    .#{$point}_#{$name} {
+      visibility: $value;
+    }
+  }
+}
+
+@include media("sm") {
+  @include visibility("sm");
+}
+
+@include media("md") {
+  @include visibility("md");
+}
+
+@include media("lg") {
+  @include visibility("lg");
+}
+
+@include media("xl") {
+  @include visibility("xl");
+}
+
+@include media("xl2") {
+  @include visibility("xl2");
+}
+
+@include media("xl3") {
+  @include visibility("xl3");
+}

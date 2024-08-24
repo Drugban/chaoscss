@@ -1,0 +1,34 @@
+@mixin colors($point) {
+  @include color("br", border-color, $point);
+  @include color("bg", background-color, $point);
+  @include color("decor", text-decoration-color, $point);
+  @include color("fl", fill, $point);
+  @include color("line", outline-color, $point);
+  @include color("clr", color, $point);
+}
+
+@include colors("");
+
+@include media("sm") {
+  @include colors("sm");
+}
+
+@include media("md") {
+  @include colors("md");
+}
+
+@include media("lg") {
+  @include colors("lg");
+}
+
+@include media("xl") {
+  @include colors("xl");
+}
+
+@include media("xl2") {
+  @include colors("xl2");
+}
+
+@include media("xl3") {
+  @include colors("xl3");
+}

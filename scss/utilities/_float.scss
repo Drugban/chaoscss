@@ -1,0 +1,37 @@
+@each $name, $value in $ch-float {
+  .float-#{$name} {
+    float: $value;
+  }
+}
+
+@mixin float($point) {
+  @each $name, $value in $ch-float {
+    .#{$point}_float-#{$name} {
+      float: $value;
+    }
+  }
+}
+
+@include media("sm") {
+  @include float("sm");
+}
+
+@include media("md") {
+  @include float("md");
+}
+
+@include media("lg") {
+  @include float("lg");
+}
+
+@include media("xl") {
+  @include float("xl");
+}
+
+@include media("xl2") {
+  @include float("xl2");
+}
+
+@include media("xl3") {
+  @include float("xl3");
+}

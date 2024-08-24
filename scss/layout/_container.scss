@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  @include container();
+
+  &-full {
+    width: 100% !important;
+    @include container();
+  }
+
+  @each $point, $value in $breakpoints {
+    &-#{$point} {
+      @include container();
+      max-width: $value;
+      width: 100%;
+    }
+  }
+
+  @for $i from 0 through 100 {
+    &-#{$i}p {
+      width: calc($i * 1%);
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, "sm")) {
+  .container {
+    max-width: map-get($breakpoints, "sm");
+  }
+}
+
+@media (min-width: map-get($breakpoints, "md")) {
+  .container {
+    max-width: map-get($breakpoints, "md");
+  }
+}
+
+@media (min-width: map-get($breakpoints, "lg")) {
+  .container {
+    max-width: map-get($breakpoints, "lg");
+  }
+}
+
+@media (min-width: map-get($breakpoints, "xl")) {
+  .container {
+    max-width: map-get($breakpoints, "xl");
+  }
+}
+
+@media (min-width: map-get($breakpoints, "xl2")) {
+  .container {
+    max-width: map-get($breakpoints, "xl2");
+  }
+}
+
+@media (min-width: map-get($breakpoints, "xl3")) {
+  .container {
+    max-width: map-get($breakpoints, "xl3");
+  }
+}

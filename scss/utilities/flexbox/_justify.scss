@@ -1,0 +1,51 @@
+@each $property, $map in $ch-justify {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  .j-#{$prefix} {
+    @each $unit, $value in $values {
+      &-#{$unit} {
+        justify-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@mixin justify($point) {
+  @each $property, $map in $ch-justify {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+
+    .#{$point}_j-#{$prefix} {
+      @each $unit, $value in $values {
+        &-#{$unit} {
+          justify-#{$property}: $value;
+        }
+      }
+    }
+  }
+}
+
+@include media("sm") {
+  @include justify("sm");
+}
+
+@include media("md") {
+  @include justify("md");
+}
+
+@include media("lg") {
+  @include justify("lg");
+}
+
+@include media("xl") {
+  @include justify("xl");
+}
+
+@include media("xl2") {
+  @include justify("xl2");
+}
+
+@include media("xl3") {
+  @include justify("xl3");
+}

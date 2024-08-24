@@ -1,0 +1,393 @@
+$clrs: (
+  "white": #fff,
+  "light": #f8f9fa,
+  "black": #000,
+  "dark": #1f1f1f,
+  "gray": #5b5b5b,
+  "red": #dc2626,
+  "rose": #e11d48,
+  "pink": #ec4899,
+  "yellow": #eab308,
+  "orange": #ff9500,
+  "green": #84cc16,
+  "lime": #10b981,
+  "primary": #0d35fd,
+  "blue": #2563eb,
+  "sky": #0ea5e9,
+  "cyan": #02eaea,
+  "violet": #8b5cf6,
+  "indigo": #4d0482,
+  "brow": #800408,
+  "purple": #800480,
+);
+
+:root {
+  --white: #fff;
+  --light: #f8f9fa;
+  --black: #000;
+  --dark: #1f1f1f;
+  --gray: #5b5b5b;
+  --red: #dc2626;
+  --rose: #e11d48;
+  --pink: #ec4899;
+  --yellow: #eab308;
+  --orange: #ff9500;
+  --green: #84cc16;
+  --lime: #10b981;
+  --primary: #0d35fd;
+  --blue: #2563eb;
+  --sky: #0ea5e9;
+  --cyan: #02eaea;
+  --violet: #8b5cf6;
+  --indigo: #4d0482;
+  --brow: #800408;
+  --purple: #800480;
+}
+
+$clrs-rgba: (
+  "white": rgba(255, 255, 255, 0),
+  "light": rgba(248, 249, 250, 0),
+  "black": rgba(0, 0, 0, 0),
+  "dark": rgba(3, 0, 0, 0),
+  "red": rgba(220, 38, 38, 0),
+  "rose": rgba(225, 29, 72, 0),
+  "pink": rgba(236, 72, 153, 0),
+  "yellow": rgba(234, 179, 8, 0),
+  "orange": rgba(255, 149, 0, 0),
+  "green": rgba(132, 204, 22, 0),
+  "lime": rgba(16, 185, 129, 0),
+  "primary": rgba(13, 53, 253, 0),
+  "blue": rgba(37, 99, 235, 0),
+  "sky": rgba(14, 165, 233, 0),
+  "cyan": rgba(2, 234, 234, 0),
+  "violet": rgba(139, 92, 246, 0),
+  "indigo": rgba(77, 4, 130, 0),
+  "brow": rgba(128, 4, 8, 0),
+  "purple": rgba(128, 4, 128, 0),
+);
+
+:root {
+  --white-rgb: 255, 255, 255;
+  --light-rgb: 248, 249, 250;
+  --black-rgb: 0, 0, 0;
+  --dark-rgb: 3, 0, 0;
+  --red-rgb: 220, 38, 38;
+  --rose-rgb: 225, 29, 72;
+  --pink-rgb: 236, 72, 153;
+  --yellow-rgb: 234, 179, 8;
+  --orange-rgb: 255, 149, 0;
+  --green-rgb: 132, 204, 22;
+  --lime-rgb: 16, 185, 129;
+  --primary-rgb: 13, 53, 253;
+  --blue-rgb: 37, 99, 235;
+  --sky-rgb: 14, 165, 233;
+  --cyan-rgb: 2, 234, 234;
+  --violet-rgb: 139, 92, 246;
+  --indigo-rgb: 77, 4, 130;
+  --brow-rgb: 128, 4, 8;
+  --purple-rgb: 128, 4, 128;
+}
+
+$clrs-types: (
+  "transparent": transparent,
+  "inherit": inherit,
+);
+
+$breakpoints: (
+  "xs": 0px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "xl2": 1536px,
+  "xl3": 1920px,
+);
+
+$ch-body-font-family: (
+  "-apple-system",
+  "BlinkMacSystemFont",
+  "Segoe UI",
+  "Noto Sans",
+  "Helvetica",
+  "Arial",
+  "sans-serif",
+  "Apple Color Emoji",
+  "Segoe UI Emoji"
+);
+
+$ch-extend: 320;
+
+$ch-box-sizing: (
+  "border": border-box,
+  "content": content-box,
+);
+
+$ch-display: (
+  "block": block,
+  "inline": inline,
+  "inline-block": inline-block,
+  "flex": flex,
+  "inline-flex": inline-flex,
+  "grid": grid,
+  "inline-grid": inline-grid,
+  "none": none,
+);
+
+$ch-float: (
+  "end": inline-end,
+  "start": inline-start,
+  "left": left,
+  "right": right,
+);
+
+$ch-overflow: (
+  "auto": auto,
+  "hidden": hidden,
+  "visible": visible,
+  "clip": clip,
+  "scroll": scroll,
+);
+
+$ch-overflow-x: (
+  "auto": auto,
+  "hidden": hidden,
+  "visible": visible,
+  "clip": clip,
+  "scroll": scroll,
+);
+
+$ch-overflow-y: (
+  "auto": auto,
+  "hidden": hidden,
+  "visible": visible,
+  "clip": clip,
+  "scroll": scroll,
+);
+
+$ch-position: (
+  "static": static,
+  "sticky": sticky,
+  "fixed": fixed,
+  "absolute": absolute,
+  "relative": relative,
+);
+
+$ch-visibility: (
+  "hidden": hidden,
+  "visible": visible,
+);
+
+$ch-font-style: (
+  "italic": italic,
+  "noitalic": normal,
+);
+
+$ch-line-height: (
+  "normal": 1,
+  "high": 2,
+);
+
+$ch-text-align: (
+  "center": center,
+  "end": end,
+  "start": start,
+  "left": left,
+  "right": right,
+);
+
+$ch-text-transform: (
+  "uppercase": uppercase,
+  "lowercase": lowercase,
+  "capitalize": capitalize,
+  "normalcase": normal,
+);
+
+$ch-font: (
+  "family": (
+    "sans": "Open Sans",
+    "inter": "Inter",
+    "roboto": "Roboto",
+    "poppins": "Poppins",
+    "sans-serif": sans-serif,
+    "serif": serif,
+  ),
+  "style": (
+    "italic": italic,
+    "noitalic": normal,
+  ),
+);
+$ch-decor: (
+  "line": (
+    "underline": underline,
+    "overline": overline,
+    "noline": none,
+    "throughline": line-through,
+  ),
+  "style": (
+    "solid": solid,
+    "double": double,
+    "dashed": dashed,
+    "dotted": dotted,
+    "wavy": wavy,
+  ),
+  "thickness": (
+    "font": from-font,
+    "auto": auto,
+  ),
+);
+
+$ch-background: (
+  "attachment": (
+    "fixed": fixed,
+    "local": local,
+    "scroll": scroll,
+  ),
+  "clip": (
+    "prefix": "clip",
+    "values": (
+      "border": border-box,
+      "content": content-box,
+      "padding": padding-box,
+    ),
+  ),
+  "position": (
+    "t": top,
+    "b": bottom,
+    "l": left,
+    "r": right,
+    "c": center,
+    "tr": top right,
+    "tl": top left,
+    "br": bottom right,
+    "bl": bottom left,
+  ),
+  "size": (
+    "cover": cover,
+    "contain": contain,
+    "auto": auto,
+  ),
+  "repeat": (
+    "repeat": repeat,
+    "norepeat": no-repeat,
+    "y-repeat": repeat-y,
+    "x-repeat": repeat-x,
+  ),
+);
+
+$ch-align: (
+  "items": (
+    "prefix": "i",
+    "values": (
+      "c": center,
+      "e": end,
+      "s": start,
+    ),
+  ),
+  "content": (
+    "prefix": "c",
+    "values": (
+      "c": center,
+      "e": end,
+      "s": start,
+      "b": space-between,
+      "a": space-around,
+    ),
+  ),
+  "self": (
+    "prefix": "s",
+    "values": (
+      "c": center,
+      "e": flex-end,
+      "s": flex-start,
+      "a": auto,
+    ),
+  ),
+);
+$ch-justify: (
+  "items": (
+    "prefix": "i",
+    "values": (
+      "c": center,
+      "e": flex-end,
+      "s": flex-start,
+      "r": right,
+      "l": left,
+    ),
+  ),
+  "content": (
+    "prefix": "c",
+    "values": (
+      "c": center,
+      "e": flex-end,
+      "s": flex-start,
+      "r": right,
+      "l": left,
+      "b": space-between,
+      "a": space-around,
+    ),
+  ),
+  "self": (
+    "prefix": "s",
+    "values": (
+      "c": center,
+      "e": flex-end,
+      "s": flex-start,
+      "a": auto,
+      "r": right,
+      "l": left,
+    ),
+  ),
+);
+$ch-place: (
+  "items": (
+    "prefix": "i",
+    "values": (
+      "c": center,
+      "e": end,
+      "s": start,
+    ),
+  ),
+  "content": (
+    "prefix": "c",
+    "values": (
+      "c": center,
+      "e": end,
+      "s": start,
+      "b": space-between,
+      "a": space-around,
+    ),
+  ),
+  "self": (
+    "prefix": "s",
+    "values": (
+      "c": center,
+      "e": end,
+      "s": start,
+      "a": auto,
+      "r": right,
+    ),
+  ),
+);
+
+$ch-flex: (
+  "wrap": (
+    "wrap": wrap,
+    "wrap-reverse": wrap-reverse,
+    "nowrap": nowrap,
+  ),
+  "direction": (
+    "row": row,
+    "row-reverse": row-reverse,
+    "column": column,
+    "column-reverse": column-reverse,
+  ),
+);
+
+$ch-border-style: (
+  "solid": solid,
+  "dashed": dashed,
+  "dotted": dotted,
+  "double": double,
+  "none": none,
+  "hidden": hidden,
+);

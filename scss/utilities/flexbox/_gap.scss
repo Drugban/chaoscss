@@ -1,0 +1,57 @@
+@for $i from 0 through $ch-extend {
+  .gap {
+    &-#{$i} {
+      gap: $i + (px);
+    }
+
+    &-x-#{$i} {
+      column-gap: $i + (px);
+    }
+
+    &-y-#{$i} {
+      row-gap: $i + (px);
+    }
+  }
+}
+
+@mixin gap($point) {
+  @for $i from 0 through $ch-extend {
+    .#{$point}_gap {
+      &-#{$i} {
+        gap: $i + (px);
+      }
+
+      &-x-#{$i} {
+        column-gap: $i + (px);
+      }
+
+      &-y-#{$i} {
+        row-gap: $i + (px);
+      }
+    }
+  }
+}
+
+@include media("sm") {
+  @include gap("sm");
+}
+
+@include media("md") {
+  @include gap("md");
+}
+
+@include media("lg") {
+  @include gap("lg");
+}
+
+@include media("xl") {
+  @include gap("xl");
+}
+
+@include media("xl2") {
+  @include gap("xl2");
+}
+
+@include media("xl3") {
+  @include gap("xl3");
+}

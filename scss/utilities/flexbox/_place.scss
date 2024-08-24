@@ -1,0 +1,51 @@
+@each $property, $map in $ch-place {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  .p-#{$prefix} {
+    @each $unit, $value in $values {
+      &-#{$unit} {
+        place-#{$property}: $value;
+      }
+    }
+  }
+}
+
+@mixin place($point) {
+  @each $property, $map in $ch-place {
+    $prefix: map-get($map, "prefix");
+    $values: map-get($map, "values");
+
+    .#{$point}_p-#{$prefix} {
+      @each $unit, $value in $values {
+        &-#{$unit} {
+          place-#{$property}: $value;
+        }
+      }
+    }
+  }
+}
+
+@include media("sm") {
+  @include place("sm");
+}
+
+@include media("md") {
+  @include place("md");
+}
+
+@include media("lg") {
+  @include place("lg");
+}
+
+@include media("xl") {
+  @include place("xl");
+}
+
+@include media("xl2") {
+  @include place("xl2");
+}
+
+@include media("xl3") {
+  @include place("xl3");
+}

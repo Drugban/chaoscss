@@ -1,0 +1,45 @@
+@for $i from 0 through $ch-extend {
+  .z-#{$i} {
+    z-index: $i;
+  }
+
+  .z-n#{$i} {
+    z-index: calc($i - ($i * 2));
+  }
+}
+
+@mixin z-index($point) {
+  @for $i from 0 through $ch-extend {
+    .#{$point}_z-#{$i} {
+      z-index: $i;
+    }
+
+    .#{$point}_z-n#{$i} {
+      z-index: calc($i - ($i * 2));
+    }
+  }
+}
+
+@include media("sm") {
+  @include z-index("sm");
+}
+
+@include media("md") {
+  @include z-index("md");
+}
+
+@include media("lg") {
+  @include z-index("lg");
+}
+
+@include media("xl") {
+  @include z-index("xl");
+}
+
+@include media("xl2") {
+  @include z-index("xl2");
+}
+
+@include media("xl3") {
+  @include z-index("xl3");
+}

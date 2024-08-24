@@ -1,0 +1,19 @@
+.masthead {
+  padding-top: 5rem;
+}
+
+.badge {
+  color: var(--lime);
+  border: 2px solid var(--lime);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(var(--lime-rgb), 0.3);
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.buttongroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

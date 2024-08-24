@@ -1,0 +1,161 @@
+@for $i from 0 through $ch-extend {
+  .t-#{$i} {
+    top: $i + (px);
+  }
+
+  .l-#{$i} {
+    left: $i + (px);
+  }
+
+  .r-#{$i} {
+    right: $i + (px);
+  }
+
+  .b-#{$i} {
+    bottom: $i + (px);
+  }
+
+  .t--#{$i} {
+    top: -$i + (px);
+  }
+
+  .l--#{$i} {
+    left: -$i + (px);
+  }
+
+  .r--#{$i} {
+    right: -$i + (px);
+  }
+
+  .b--#{$i} {
+    bottom: -$i + (px);
+  }
+}
+
+@for $i from 0 through 100 {
+  .t-#{$i}p {
+    top: calc($i * 1%);
+  }
+
+  .l-#{$i}p {
+    left: calc($i * 1%);
+  }
+
+  .r-#{$i}p {
+    right: calc($i * 1%);
+  }
+
+  .b-#{$i}p {
+    bottom: calc($i * 1%);
+  }
+
+  .t--#{$i}p {
+    top: -$i * 1%;
+  }
+
+  .l--#{$i}p {
+    left: -$i * 1%;
+  }
+
+  .r--#{$i}p {
+    right: -$i * 1%;
+  }
+
+  .b--#{$i}p {
+    bottom: -$i * 1%;
+  }
+}
+
+@mixin top-left-right-bottom($point) {
+  @for $i from 0 through $ch-extend {
+    .#{$point}_t-#{$i} {
+      top: $i + (px);
+    }
+
+    .#{$point}_l-#{$i} {
+      left: $i + (px);
+    }
+
+    .#{$point}_r-#{$i} {
+      right: $i + (px);
+    }
+
+    .#{$point}_b-#{$i} {
+      bottom: $i + (px);
+    }
+
+    .#{$point}_t--#{$i} {
+      top: -$i + (px);
+    }
+
+    .#{$point}_l--#{$i} {
+      left: -$i + (px);
+    }
+
+    .#{$point}_r--#{$i} {
+      right: -$i + (px);
+    }
+
+    .#{$point}_b--#{$i} {
+      bottom: -$i + (px);
+    }
+  }
+
+  @for $i from 0 through 100 {
+    .#{$point}_t-#{$i}p {
+      top: calc($i * 1%);
+    }
+
+    .#{$point}_l-#{$i}p {
+      left: calc($i * 1%);
+    }
+
+    .#{$point}_r-#{$i}p {
+      right: calc($i * 1%);
+    }
+
+    .#{$point}_b-#{$i}p {
+      bottom: calc($i * 1%);
+    }
+
+    .#{$point}_t--#{$i}p {
+      top: -$i * 1%;
+    }
+
+    .#{$point}_l--#{$i}p {
+      left: -$i * 1%;
+    }
+
+    .#{$point}_r--#{$i}p {
+      right: -$i * 1%;
+    }
+
+    .#{$point}_b--#{$i}p {
+      bottom: -$i * 1%;
+    }
+  }
+}
+
+@include media("sm") {
+  @include top-left-right-bottom("sm");
+}
+
+@include media("md") {
+  @include top-left-right-bottom("md");
+}
+
+@include media("lg") {
+  @include top-left-right-bottom("lg");
+}
+
+@include media("xl") {
+  @include top-left-right-bottom("xl");
+}
+
+@include media("xl2") {
+  @include top-left-right-bottom("xl2");
+}
+
+@include media("xl3") {
+  @include top-left-right-bottom("xl3");
+}
